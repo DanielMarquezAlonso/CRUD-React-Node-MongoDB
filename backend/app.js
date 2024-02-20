@@ -1,5 +1,6 @@
 const { request } = require('express')
 const express = require('express')
+const cors = require('cors')
 const dbconnect = require('./config')
 const ModelUser = require('./userModel')
 const app = express()
@@ -36,6 +37,7 @@ router.delete('/:id', async (req, res) => {
   res.send(respuesta)
 })
 
+app.use(cors())
 app.use(express.json())
 app.use(router)
 app.listen(3000, () => {

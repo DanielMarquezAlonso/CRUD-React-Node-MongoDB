@@ -6,6 +6,8 @@ const dbconnect = async () => {
         console.log('Conexión a la base de datos establecida...');
     } catch (err) {
         console.error(err);
+        console.log('Fallo en la conexión a la base de datos...');
+
     }
 };
 
