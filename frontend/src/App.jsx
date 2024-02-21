@@ -1,6 +1,6 @@
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
-import { TasksPage } from './pages/TasksPage'
-import { TaskFormPage } from './pages/TaskFormPage'
+import { ClientsPage } from './pages/ClientsPage'
+import { ClientFormPage } from './pages/ClientFormPage'
 import { Navigation } from './components/Navigation'
 
 function App() {
@@ -8,9 +8,11 @@ function App() {
     <BrowserRouter>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Navigate to="/tasks" />} />
-        <Route path="/tasks" element={<TasksPage />} />
-        <Route path="/tasks-create" element={<TaskFormPage />} />
+        <Route path="/" element={<Navigate to="/clients" />} />
+        <Route path="/clients" element={<ClientsPage />} />
+        <Route path="/clients-create" element={<ClientFormPage />} />
+        <Route path="/clients/:id" element={<ClientFormPage />} />
+
       </Routes>
     </BrowserRouter>
   );

@@ -3,10 +3,10 @@ import {Link} from 'react-router-dom';
 export function Navigation() {
     return (
         <div>
-            <Link to="/tasks">
-                <h1>Task App</h1>
+            <Link to="/clients">
+                <h1>Client App</h1>
             </Link>
-            <Link to="/tasks-create">Create task</Link>
+            <Link to="/clients-create">Create client</Link>
         </div>
     )
 }
