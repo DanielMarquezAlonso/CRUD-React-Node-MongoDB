@@ -31,10 +31,6 @@ router.post("/clients", async (req,res) => {
 router.put('/clients/:id', async (req, res) => {
   const body = req.body
   const id = req.params.id
-  const existingEmail = await ModelUser.findOne({ email: body.email });
-  if (existingEmail) {
-    return res.status(400).json({ error: 'This email is registered', type: 'unique' });
-  }
   const respuesta = await ModelUser.findByIdAndUpdate({_id: id}, body)
   res.send(respuesta)
 

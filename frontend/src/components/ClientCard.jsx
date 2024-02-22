@@ -4,9 +4,9 @@ export function ClientCard({client}){
     const navigate = useNavigate()
 
     return (
-        <div style={{background: "#101010"}}
+        <div className="bg-zic-800 p-3 hover:bg-zinc-700 hover:cursor-pointer"
             onClick={() => {
-                navigate(`/clients/${client._id}`)
+                navigate(`/clients-create/${client._id}`)
             }}
         >
             <h4>{client.name}</h4>

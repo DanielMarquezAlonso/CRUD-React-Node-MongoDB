@@ -8,7 +8,7 @@ export const getAllClients = () => {
 }
 
 export const getClient = (id) => {
-    return clientsapi.get(`/${id}`)
+    return clientsapi.get(`${id}`)
 }
 
 export const createClient = (client) => {
